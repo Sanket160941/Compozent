@@ -1,0 +1,1 @@
+The number of words in 'Python\File_Handling\reading.txt' is: 48

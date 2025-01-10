@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Movie</title>
+    <!-- Links the external CSS file for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_movie.css') }}">
+</head>
+
+<body>
+    <h1>Add a New Movie</h1>
+    <!-- Creates a form with action pointing to "/add" and method set to POST for sending data -->
+    <form action="/add" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+
+        <label for="director">Director:</label>
+        <input type="text" id="director" name="director" required>
+        <br>
+
+        <label for="year">Year of Release:</label>
+        <input type="number" id="year" name="year" required>
+        <br>
+
+        <label for="review">Review:</label>
+        <!-- Text area for entering a review, prefilled with a variable {{ review }} and marked as required -->
+        <textarea id="review" name="review" rows="4" required>{{ review }}</textarea>
+        <br>
+
+        <button type="submit">Add Movie</button>
+    </form>
+    <br>
+    <a href="/">Back to Movie List</a>
+</body>
+
+</html>
